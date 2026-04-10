@@ -11,13 +11,50 @@ const navLinks = [
 ---
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold text-primary italic">Yilong Scrubs</a>
-    <nav class="hidden md:flex space-x-8">
+    <a href="/" class="text-xl md:text-2xl font-bold text-primary italic">Yilong Scrubs</a>
+    
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex space-x-6 xl:space-x-8">
       {navLinks.map(link => (
-        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-xs tracking-widest transition-colors">
+        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-[10px] xl:text-xs tracking-widest transition-colors">
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="lg:hidden p-2 text-slate-600 hover:text-primary focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl">
+    <nav class="flex flex-col p-4 space-y-4">
+      {navLinks.map(link => (
+        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-xs tracking-widest py-2 px-4 rounded-lg hover:bg-slate-50 transition-all">
           {link.label}
         </a>
       ))}
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  menuToggle.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Close icon
+    } else {
+      mobileMenu.classList.add('hidden');
+      menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); // Hamburger icon
+    }
+  });
+</script>
