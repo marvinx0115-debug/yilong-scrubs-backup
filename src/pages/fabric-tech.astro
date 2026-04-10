@@ -3,63 +3,69 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Fabric & Tech" description="Explore Yilong's advanced medical textile collection. OEKO-TEX certified fabrics, moisture-wicking technology, and 4-way stretch.">
   <div class="container mx-auto px-4 py-24">
-    <h1 class="text-5xl font-black mb-8 text-center italic">Advanced Textile Collection</h1>
-    <p class="text-slate-500 mb-20 text-center max-w-3xl mx-auto text-lg">We don't just manufacture apparel; we innovate the very fibers medical professionals wear. Our fabric systems are the result of 20 years of continuous refinement.</p>
+    <h1 class="text-5xl font-black mb-8 text-center italic text-slate-900 leading-tight">Advanced Medical Textile Collection</h1>
+    <p class="text-slate-500 mb-20 text-center max-w-3xl mx-auto text-lg italic text-slate-600">We don't just manufacture apparel; we innovate the very fibers medical professionals wear. Our fabric systems are the result of 20 years of continuous refinement and research.</p>
     
+    <!-- Hero Fabric Image -->
+    <div class="rounded-[3rem] overflow-hidden shadow-2xl mb-32 h-[500px]">
+      <img src="https://sc02.alicdn.com/kf/A11493834b4ac48288484ad3adb699ac8V.png" alt="Premium Fabric Rolls Collection" class="w-full h-full object-cover" />
+    </div>
+
     <!-- Core Fabric Systems -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
       <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
         <h3 class="text-2xl font-black mb-4 italic text-primary">Elite Comfort Blend</h3>
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">72% Poly / 21% Rayon / 7% Spandex</p>
-        <p class="text-slate-600 mb-6">Our signature premium blend. Rayon provides an ultra-soft, silky touch, while Polyester ensures durability and Spandex delivers superior elasticity.</p>
-        <div class="text-primary font-bold italic">205 GSM</div>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 italic">Signature 72/21/7 Ratio</p>
+        <p class="text-slate-600 mb-6 italic text-sm">Our most luxurious blend. Rayon provides an ultra-soft, silky touch, while Polyester ensures durability and Spandex delivers superior elasticity.</p>
+        <div class="text-primary font-bold italic text-xl underline decoration-2 underline-offset-8">205 GSM</div>
       </div>
 
       <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
         <h3 class="text-2xl font-black mb-4 italic text-secondary">Pro-Active Performance</h3>
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Polyester / Spandex Core</p>
-        <p class="text-slate-600 mb-6">Designed for high-performance durability. Features advanced moisture-wicking capillary action to keep you dry through the longest shifts.</p>
-        <div class="text-secondary font-bold italic">180 GSM</div>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 italic">Polyester / Spandex Core</p>
+        <p class="text-slate-600 mb-6 italic text-sm">Designed for high-performance durability. Features advanced moisture-wicking capillary action to keep you dry through the longest shifts.</p>
+        <div class="text-secondary font-bold italic text-xl underline decoration-2 underline-offset-8">180 GSM</div>
       </div>
 
       <div class="p-10 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all text-center">
         <h3 class="text-2xl font-black mb-4 italic text-blue-500">Air-Flow Tech</h3>
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Lightweight Poly-Mesh Tech</p>
-        <p class="text-slate-600 mb-6">A feather-light weave optimized for maximum breathability. Perfect for hot-climate medical environments and high-intensity roles.</p>
-        <div class="text-blue-500 font-bold italic">130 GSM</div>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 italic">Lightweight Poly-Mesh Tech</p>
+        <p class="text-slate-600 mb-6 italic text-sm">A feather-light weave optimized for maximum breathability. Perfect for hot-climate medical environments and high-intensity active roles.</p>
+        <div class="text-blue-500 font-bold italic text-xl underline decoration-2 underline-offset-8">130 GSM</div>
       </div>
     </div>
 
     <!-- Color Palette Section -->
     <div class="mb-32">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
-          <h2 class="text-4xl font-black mb-8 italic">Vibrant Color Palette</h2>
-          <p class="text-xl text-slate-700 leading-relaxed mb-8 italic">Color is identity. We offer a sophisticated range of medical colors that are reactive-dyed for maximum color fastness, ensuring your uniforms look new even after 50+ industrial washes.</p>
-          <ul class="grid grid-cols-2 gap-4 text-sm text-slate-600 font-bold uppercase tracking-widest italic">
-            <li>✓ Deep Navy Blue</li>
-            <li>✓ Royal Blue</li>
-            <li>✓ Burgundy / Wine</li>
-            <li>✓ Charcoal Grey</li>
-            <li>✓ Hunter Green</li>
-            <li>✓ Teal / Caribbean Blue</li>
+          <h2 class="text-4xl font-black mb-8 italic text-slate-900 leading-tight">Vibrant Color Palette & Fastness</h2>
+          <p class="text-xl text-slate-700 leading-relaxed mb-8 italic text-slate-600">Color is identity. We offer a sophisticated range of medical colors that are reactive-dyed for maximum color fastness, ensuring your uniforms look new even after 50+ industrial washes.</p>
+          <ul class="grid grid-cols-2 gap-4 text-sm text-slate-600 font-bold uppercase tracking-widest italic text-primary">
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-blue-900"></span> Deep Navy Blue</li>
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-blue-600"></span> Royal Blue</li>
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-red-800"></span> Burgundy / Wine</li>
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-slate-600"></span> Charcoal Grey</li>
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-emerald-800"></span> Hunter Green</li>
+            <li class="flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-teal-600"></span> Teal / Caribbean</li>
           </ul>
         </div>
-        <div class="rounded-[3rem] overflow-hidden shadow-2xl">
+        <div class="rounded-[3rem] overflow-hidden shadow-2xl relative">
           <img src="https://sc02.alicdn.com/kf/A06c4adcbc1864fe3a78b56ab652195d3N.png" alt="Fabric Swatches Palette" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
       </div>
     </div>
 
     <!-- Technical Specs -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-slate-900 text-white p-12 rounded-[3rem]">
+      <div class="bg-slate-900 text-white p-16 rounded-[4rem] shadow-xl">
         <h3 class="text-2xl font-black mb-6 italic text-secondary underline decoration-2 underline-offset-8">OEKO-TEX® Standard 100</h3>
         <p class="text-lg text-slate-300 leading-relaxed italic">Safety you can feel. All Yilong fabrics are certified to be free from harmful substances, pH-friendly, and safe for prolonged skin contact. We prioritize your health as much as you prioritize your patients'.</p>
       </div>
-      <div class="bg-primary text-white p-12 rounded-[3rem]">
-        <h3 class="text-2xl font-black mb-6 italic text-white underline decoration-2 underline-offset-8">Anti-Microbial & Fluid-Repellent</h3>
-        <p class="text-lg text-slate-200 leading-relaxed italic">Optional specialized finishing available for institutional orders. Advanced silver-ion treatments for odor control and fluorocarbon-free water repellency for added protection.</p>
+      <div class="bg-primary text-white p-16 rounded-[4rem] shadow-xl">
+        <h3 class="text-2xl font-black mb-6 italic text-white underline decoration-2 underline-offset-8">Anti-Microbial & Liquid-Repellent</h3>
+        <p class="text-lg text-slate-200 leading-relaxed italic italic">Optional specialized finishing available for institutional orders. Advanced silver-ion treatments for odor control and fluorocarbon-free water repellency for added protection in high-risk environments.</p>
       </div>
     </div>
   </div>
