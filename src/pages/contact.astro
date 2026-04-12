@@ -33,48 +33,48 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Advanced Lead-Gen Form (Learned from Bestex) -->
+      <!-- Advanced Lead-Gen Form with Formspree -->
       <div class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-slate-50">
-        <form class="space-y-6 italic">
+        <form action="https://formspree.io/f/xrerzeov" method="POST" class="space-y-6 italic">
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">First Name</label>
-              <input type="text" class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="John" />
+              <input type="text" name="firstName" required class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="John" />
             </div>
             <div>
               <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Last Name</label>
-              <input type="text" class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="Doe" />
+              <input type="text" name="lastName" required class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="Doe" />
             </div>
           </div>
           <div>
             <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Work Email</label>
-            <input type="email" class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="john@hospital.com" />
+            <input type="email" name="email" required class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary" placeholder="john@hospital.com" />
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Target MOQ</label>
-              <select class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary">
-                <option>10-50 Sets</option>
-                <option>50-200 Sets</option>
-                <option>200-1000 Sets</option>
-                <option>1000+ Sets</option>
+              <select name="moq" class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary">
+                <option value="10-50 Sets">10-50 Sets</option>
+                <option value="50-200 Sets">50-200 Sets</option>
+                <option value="200-1000 Sets">200-1000 Sets</option>
+                <option value="1000+ Sets">1000+ Sets</option>
               </select>
             </div>
             <div>
               <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Selling Platform</label>
-              <select class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary">
-                <option>Amazon/E-commerce</option>
-                <option>Private Clinic</option>
-                <option>Hospital Wholesale</option>
-                <option>Retail Store</option>
+              <select name="platform" class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary">
+                <option value="Amazon/E-commerce">Amazon/E-commerce</option>
+                <option value="Private Clinic">Private Clinic</option>
+                <option value="Hospital Wholesale">Hospital Wholesale</option>
+                <option value="Retail Store">Retail Store</option>
               </select>
             </div>
           </div>
           <div>
             <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Message & Specs</label>
-            <textarea class="w-full bg-slate-50 border-none rounded-xl p-4 h-32 focus:ring-2 focus:ring-primary" placeholder="Describe your custom project or RTS needs..."></textarea>
+            <textarea name="message" required class="w-full bg-slate-50 border-none rounded-xl p-4 h-32 focus:ring-2 focus:ring-primary" placeholder="Describe your custom project or RTS needs..."></textarea>
           </div>
-          <button type="button" class="w-full bg-primary text-white font-black py-5 rounded-2xl hover:bg-blue-800 transition shadow-xl uppercase tracking-widest text-lg">Send Inquiry</button>
+          <button type="submit" class="w-full bg-primary text-white font-black py-5 rounded-2xl hover:bg-blue-800 transition shadow-xl uppercase tracking-widest text-lg">Send Inquiry</button>
         </form>
       </div>
     </div>
