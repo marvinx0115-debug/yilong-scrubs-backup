@@ -2,29 +2,29 @@
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/ready-to-ship', label: 'RTS (Ready to Ship)' },
+  { href: '/ready-to-ship', label: 'RTS' },
   { href: '/fabric-tech', label: 'Fabric & Tech' },
   { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 ---
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center text-left">
-    <a href="/" class="text-xl md:text-2xl font-bold text-primary italic">Yilong Scrubs</a>
+  <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+    <a href="/" class="text-lg md:text-2xl font-bold text-primary italic">Yilong Scrubs</a>
     
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-2 lg:space-x-4 xl:space-x-6">
+    <nav class="hidden lg:flex items-center space-x-3 lg:space-x-4 xl:space-x-5">
       {navLinks.map(link => (
-        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-[9px] lg:text-[10px] xl:text-xs tracking-tighter lg:tracking-widest transition-colors">
+        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-[9px] lg:text-[10px] xl:text-xs tracking-tighter lg:tracking-widest transition-colors whitespace-nowrap">
           {link.label}
         </a>
       ))}
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none border border-slate-100 rounded-lg">
+    <button id="menu-toggle" class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none" aria-label="Toggle menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
@@ -32,10 +32,10 @@ const navLinks = [
   </div>
 
   <!-- Mobile Nav Overlay -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-2xl z-50">
-    <nav class="flex flex-col p-6 space-y-4">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-2xl z-50" style="max-height: 80vh; overflow-y: auto;">
+    <nav class="flex flex-col p-4 space-y-1">
       {navLinks.map(link => (
-        <a href={link.href} class="text-slate-600 hover:text-primary font-bold uppercase text-sm tracking-widest py-3 px-4 rounded-xl hover:bg-slate-50 transition-all border-b border-slate-50 last:border-none">
+        <a href={link.href} class="text-slate-600 hover:text-primary hover:bg-slate-50 font-bold uppercase text-xs tracking-widest py-3 px-4 rounded-xl transition-all">
           {link.label}
         </a>
       ))}
@@ -55,16 +55,18 @@ const navLinks = [
         const isHidden = mobileMenu.classList.contains('hidden');
         if (isHidden) {
           mobileMenu.classList.remove('hidden');
-          menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); 
+          if (menuIcon) menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); 
         } else {
           mobileMenu.classList.add('hidden');
-          menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); 
+          if (menuIcon) menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); 
         }
       });
 
-      document.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && e.target !== menuToggle) {
+          mobileMenu.classList.add('hidden');
+          if (menuIcon) menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); 
+        }
       });
     }
   });
