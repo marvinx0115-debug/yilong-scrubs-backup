@@ -2,15 +2,38 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout 
-  title="Nursing Scrubs Collections | Global Size Guide | Yilong Scrubs" 
-  description="Explore professional nursing scrub sets. Featuring V-necks, joggers, and jumpsuits. Shop by style and use our global size guide for the perfect fit."
-  keywords="nursing scrub sets, wholesale scrubs, jogger scrub set, V-neck scrubs, medical uniform styles, global scrub size chart"
+  title="Nursing Scrubs Collections | Premium 205G / Standard 180G / Lightweight 130G | Yilong" 
+  description="Professional nursing scrub sets in three fabric tiers: Premium 205 GSM (FIGs-quality), Standard 180 GSM (durable), Lightweight 130 GSM (breathable). OEKO-TEX certified. Low MOQ from 10 sets."
+  keywords="nursing scrub sets, premium medical scrubs, wholesale scrubs, jogger scrub set, V-neck scrubs, 205 GSM scrubs, hospital uniform"
 >
   <div class="container mx-auto px-4 py-16 md:py-24">
     <h1 class="text-3xl md:text-5xl font-black mb-8 text-center italic text-slate-900 leading-tight">Nursing Scrub Collections</h1>
-    <p class="text-base md:text-lg text-slate-500 mb-12 md:mb-20 text-center max-w-2xl mx-auto italic text-slate-600">Engineered for the modern healthcare professional. Combining 20 years of manufacturing excellence with modern style.</p>
+    <p class="text-base md:text-lg text-slate-500 mb-8 md:mb-12 text-center max-w-2xl mx-auto italic">Engineered for the modern healthcare professional. Three fabric tiers for different markets and budgets.</p>
     
-    <!-- Shop by Style (Learned from Bestex) -->
+    <!-- ==================== FABRIC SELECTION GUIDE (NEW) ==================== -->
+    <div class="bg-slate-50 rounded-2xl p-6 md:p-8 mb-12 border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-2xl">🧵</span>
+        <h3 class="font-black text-lg text-slate-900">Not sure which fabric to choose? Here's a quick guide:</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white rounded-xl p-5 border-l-4 border-secondary">
+          <p class="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Premium 205 GSM</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Building a US/Canada brand, want FIGs-quality feel? Ultra-soft, silky drape, 4-way stretch.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border-l-4 border-blue-500">
+          <p class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Standard 180 GSM</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Hospital supply, wholesale, or uniform orders? Durable, comfortable, great value.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border-l-4 border-orange-400">
+          <p class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-2">Lightweight 130 GSM</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Hot climate markets (Philippines, Africa, LATAM)? Lightweight, breathable, quick-dry.</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-500 text-center">All three tiers are OEKO-TEX® certified and available in XXS–6XL. <a href="/fabric-technology" class="text-secondary font-bold hover:underline">Learn more about our fabrics →</a></p>
+    </div>
+    
+    <!-- Shop by Style -->
     <div class="mb-20">
       <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-8 text-center italic">Shop by Style</h3>
       <div class="flex flex-wrap justify-center gap-4 md:gap-8 italic">
@@ -86,7 +109,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- Global Size Guide (Learned from Bestex) -->
+    <!-- CTA -->
+    <div class="mt-20 md:mt-32 text-center">
+      <h3 class="text-xl md:text-2xl font-black mb-4 text-slate-900">Need Custom OEM or Private Label?</h3>
+      <p class="text-slate-500 max-w-xl mx-auto mb-6">We offer full customization: fabric selection, color matching, logo embroidery/printing, custom packaging. MOQ from 10 sets/color.</p>
+      <a href="/contact" class="inline-block bg-secondary text-white font-bold px-8 py-4 rounded-full hover:bg-emerald-700 transition shadow-lg">Request Custom Quote →</a>
+    </div>
+
+    <!-- Global Size Guide -->
     <div class="mt-20 md:mt-40 pt-12 md:pt-20 border-t border-slate-100">
       <h2 class="text-2xl md:text-4xl font-black mb-6 md:mb-8 text-center italic">Global Size Guide</h2>
       <p class="text-slate-500 mb-8 md:mb-12 text-center max-w-2xl mx-auto italic">Ensure the perfect fit for your team. Our scrubs are designed with a tailored fit ranging from XXS to 6XL.</p>
@@ -99,21 +129,74 @@ import Layout from '../layouts/Layout.astro';
               <th class="p-6">Chest (cm)</th>
               <th class="p-6">Waist (cm)</th>
               <th class="p-6">Hip (cm)</th>
-              <th class="p-6">US/CA</th>
-              <th class="p-6">UK/AU</th>
+              <th class="p-6">US Size</th>
             </tr>
           </thead>
-          <tbody class="text-slate-600 font-medium">
-            <tr class="border-b border-slate-50"><td class="p-3 md:p-6 text-xs md:text-sm font-black text-primary">XS</td><td class="p-6">92</td><td class="p-6">82</td><td class="p-6">100</td><td class="p-6">0-2</td><td class="p-6">4-6</td></tr>
-            <tr class="border-b border-slate-50 bg-slate-50"><td class="p-6 font-black text-primary">S</td><td class="p-6">98</td><td class="p-6">88</td><td class="p-6">106</td><td class="p-6">4-6</td><td class="p-6">8-10</td></tr>
-            <tr class="border-b border-slate-50"><td class="p-6 font-black text-primary">M</td><td class="p-6">104</td><td class="p-6">94</td><td class="p-6">112</td><td class="p-6">8-10</td><td class="p-6">12-14</td></tr>
-            <tr class="border-b border-slate-50 bg-slate-50"><td class="p-6 font-black text-primary">L</td><td class="p-6">110</td><td class="p-6">100</td><td class="p-6">118</td><td class="p-6">12-14</td><td class="p-6">16-18</td></tr>
-            <tr class="border-b border-slate-50"><td class="p-6 font-black text-primary">XL</td><td class="p-6">116</td><td class="p-6">106</td><td class="p-6">124</td><td class="p-6">16-18</td><td class="p-6">20-22</td></tr>
-            <tr class="bg-slate-50"><td class="p-6 font-black text-primary">2XL</td><td class="p-6">122</td><td class="p-6">112</td><td class="p-6">130</td><td class="p-6">20-22</td><td class="p-6">24-26</td></tr>
+          <tbody class="text-slate-700">
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">XXS</td>
+              <td class="p-6">88</td>
+              <td class="p-6">78</td>
+              <td class="p-6">92</td>
+              <td class="p-6">0–2</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">XS</td>
+              <td class="p-6">92</td>
+              <td class="p-6">82</td>
+              <td class="p-6">96</td>
+              <td class="p-6">4–6</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">S</td>
+              <td class="p-6">98</td>
+              <td class="p-6">88</td>
+              <td class="p-6">102</td>
+              <td class="p-6">8–10</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">M</td>
+              <td class="p-6">104</td>
+              <td class="p-6">94</td>
+              <td class="p-6">108</td>
+              <td class="p-6">12–14</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">L</td>
+              <td class="p-6">110</td>
+              <td class="p-6">100</td>
+              <td class="p-6">114</td>
+              <td class="p-6">16–18</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">XL</td>
+              <td class="p-6">116</td>
+              <td class="p-6">106</td>
+              <td class="p-6">120</td>
+              <td class="p-6">20–22</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">2XL</td>
+              <td class="p-6">122</td>
+              <td class="p-6">112</td>
+              <td class="p-6">126</td>
+              <td class="p-6">24–26</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">3XL</td>
+              <td class="p-6">128</td>
+              <td class="p-6">118</td>
+              <td class="p-6">132</td>
+              <td class="p-6">28–30</td>
+            </tr>
+            <tr class="bg-slate-50">
+              <td class="p-3 md:p-6 font-black text-primary text-xs md:text-sm">4XL–6XL</td>
+              <td class="p-6" colspan="4">Available for most styles. Contact us for plus-size availability and MOQ.</td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <p class="mt-8 text-center text-slate-400 text-xs italic">*Note: Measurements are finished garment sizes. Plus sizes up to 6XL available on request.</p>
+      <p class="text-center mt-6"><a href="/size-guide" class="text-secondary font-bold hover:underline">View Complete Size Guide →</a></p>
     </div>
   </div>
 </Layout>
