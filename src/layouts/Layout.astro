@@ -1,5 +1,6 @@
 ---
 const { title, description, keywords } = Astro.props;
+const currentPath = Astro.url.pathname;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import WhatsAppIcon from "../components/WhatsAppIcon.astro";
@@ -23,6 +24,60 @@ function gtag(){window.dataLayer.push(arguments);}
 gtag("js", new Date());
 gtag("config", "G-RLMP6J7LW7");
 </script>
+
+<!-- Organization Schema -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Yilong Scrubs",
+  "alternateName": "Anhui Yilong Environmental Protection Technology Co., Ltd.",
+  "url": "https://yilongscrubs.com",
+  "foundingDate": "1996",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "OEKO-TEX Standard 100"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "ISO 9001:2015"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "ISO 14001:2015"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "ISO 45001:2018"
+    }
+  ]
+}</script>
+<!-- BreadcrumbList Schema (dynamic) -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": (() => {
+    const items = [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yilongscrubs.com/" }];
+    const labelMap = {
+      'about-us': 'About Us', 'about': 'About', 'products': 'Products',
+      'fabric-technology': 'Fabric Technology', 'fabric-tech': 'Fabric Technology',
+      'catalog': 'Catalog', 'contact': 'Contact', 'services': 'Services',
+      'size-guide': 'Size Guide', 'ready-to-ship': 'Ready to Ship'
+    };
+    if (currentPath && currentPath !== '/') {
+      const parts = currentPath.split('/').filter(Boolean);
+      parts.forEach((seg, i) => {
+        items.push({
+          "@type": "ListItem",
+          "position": i + 2,
+          "name": labelMap[seg] || seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+          "item": "https://yilongscrubs.com/" + parts.slice(0, i + 1).join('/')
+        });
+      });
+    }
+    return items;
+  })()
+})}></script>
 </head>
 <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
 <Header />
