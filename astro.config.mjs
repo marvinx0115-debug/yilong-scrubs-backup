@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://yilong-scrubs-site.pages.dev',
+  site: 'https://yilongscrubs.com',
   integrations: [tailwind(), sitemap()],
   output: 'static',
 });

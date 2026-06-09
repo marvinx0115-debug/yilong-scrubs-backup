@@ -1,0 +1,33 @@
+# Yilong Scrubs — AI Crawler Summary
+
+## Brand Identity
+Premium medical scrubs manufacturer since 1994.
+Company: Anhui Yilong Environmental Protection Technology Co., Ltd.
+Certifications: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, OEKO-TEX Standard 100, SGS Verified Factory
+Website: https://yilongscrubs.com
+Email: [your contact email]
+Phone: [your phone number]
+
+## Products
+- Premium 205G Nursing Scrubs: /products/ (heavyweight, 205gsm)
+- Standard 180G Nursing Scrubs: /products/ (midweight, 180gsm)
+- Lightweight 130G Nursing Scrubs: /products/ (lightweight, 130gsm)
+
+## Services
+- OEM / ODM manufacturing
+- Private label / custom branding
+- Low MOQ: 20 sets
+- Global shipping: DDP (Delivered Duty Paid)
+
+## Company Pages
+- About Us: /about-us/
+- Contact: /contact/
+- Privacy Policy: /privacy-policy/
+- Terms of Service: /terms/
+- Return Policy: /return-policy/
+
+## Manufacturing Details
+- Factory established: 1996
+- Location: Anhui Province, China
+- Production capacity: [your capacity info]
+- Sample policy: [your sample info]

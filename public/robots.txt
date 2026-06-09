@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yilong-scrubs-site.pages.dev/sitemap-index.xml
+Sitemap: https://yilongscrubs.com/sitemap-index.xml
