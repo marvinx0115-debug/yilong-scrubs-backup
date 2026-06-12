@@ -73,12 +73,12 @@ import Layout from '../layouts/Layout.astro';
           <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
             <h3 class="font-black text-slate-900 mb-4">Prefer to Contact Directly?</h3>
             <div class="space-y-3">
-              <!-- Lily -->
-              <a href="https://wa.me/8615715618345" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-slate-200">
-                <img src="/whatsapp-avatar-2.png" alt="Lily" class="w-12 h-12 rounded-full object-cover flex-shrink-0 border-2 border-[#25D366]" />
+              <!-- Rotating WhatsApp Agent -->
+              <a id="contact-whatsapp-agent" href="https://wa.me/8615715618345" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-slate-200">
+                <img src="/whatsapp-avatar-2.png" alt="WhatsApp" class="w-12 h-12 rounded-full object-cover flex-shrink-0 border-2 border-[#25D366]" />
                 <div>
-                  <p class="text-xs text-slate-400 uppercase tracking-wider font-bold">WhatsApp (Lily)</p>
-                  <p class="text-secondary font-bold">+86 157 1561 8345</p>
+                  <p id="contact-whatsapp-label" class="text-xs text-slate-400 uppercase tracking-wider font-bold">WhatsApp (Lily)</p>
+                  <p id="contact-whatsapp-phone" class="text-secondary font-bold">+86 157 1561 8345</p>
                 </div>
               </a>
               <div class="flex items-center gap-3">
@@ -181,4 +181,26 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    const agents = [
+      { name: 'Lily',   phone: '8615715618345', display: '+86 157 1561 8345' },
+      { name: 'Alisa',  phone: '8618756126151', display: '+86 187 5612 6151' },
+      { name: 'Amanda', phone: '8618005611002', display: '+86 180 0561 1002' },
+      { name: 'Karl',   phone: '8615212651571', display: '+86 152 1265 1571' },
+    ];
+    const dayIndex = Math.floor(Date.now() / 86400000) % agents.length;
+    const agent = agents[dayIndex];
+
+    const link = document.getElementById('contact-whatsapp-agent');
+    const nameLabel = document.getElementById('contact-whatsapp-label');
+    const phoneLabel = document.getElementById('contact-whatsapp-phone');
+
+    if (link && nameLabel && phoneLabel) {
+      link.href = 'https://wa.me/' + agent.phone;
+      link.querySelector('img').alt = agent.name;
+      nameLabel.textContent = 'WhatsApp (' + agent.name + ')';
+      phoneLabel.textContent = agent.display;
+    }
+  </script>
 </Layout>
