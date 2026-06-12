@@ -190,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
       { name: 'Karl',   phone: '8615212651571', display: '+86 152 1265 1571' },
       { name: 'Daisy',  phone: '8619033837392', display: '+86 190 3383 7392' },
     ];
-    const dayIndex = Math.floor(Date.now() / 86400000) % agents.length;
+    const dayIndex = Math.floor((Date.now() + 8 * 3600000) / 86400000) % agents.length;
     const agent = agents[dayIndex];
 
     const link = document.getElementById('contact-whatsapp-agent');
