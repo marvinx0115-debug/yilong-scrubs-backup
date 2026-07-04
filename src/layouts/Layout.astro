@@ -14,7 +14,7 @@ const orgSchema = {
   "@type": "Organization",
   "name": "Yilong Scrubs",
   "alternateName": "Anhui Yilong Environmental Protection Technology Co., Ltd.",
-  "url": "https://yilongscrubs.com",
+  "url": Astro.site,
   "foundingDate": "1996",
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "name": "OEKO-TEX Standard 100" },
@@ -31,7 +31,7 @@ const labelMap = {
   'catalog': 'Catalog', 'contact': 'Contact', 'services': 'Services',
   'size-guide': 'Size Guide', 'ready-to-ship': 'Ready to Ship'
 };
-const breadcrumbItems = [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yilongscrubs.com/" }];
+const breadcrumbItems = [{ "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site + "/" }];
 if (currentPath && currentPath !== '/') {
   const parts = currentPath.split('/').filter(Boolean);
   parts.forEach((seg, i) => {
@@ -39,7 +39,7 @@ if (currentPath && currentPath !== '/') {
       "@type": "ListItem",
       "position": i + 2,
       "name": labelMap[seg] || seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-      "item": "https://yilongscrubs.com/" + parts.slice(0, i + 1).join('/')
+      "item": Astro.site + "/" + parts.slice(0, i + 1).join('/')
     });
   });
 }
@@ -75,8 +75,8 @@ const breadcrumbSchema = { "@context": "https://schema.org", "@type": "Breadcrum
 <meta name="twitter:image" content={new URL(image, Astro.site)} />
 
 <!-- hreflang (English default) -->
-<link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname, 'https://yilongscrubs.com')} />
-<link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, 'https://yilongscrubs.com')} />
+<link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname, Astro.site)} />
+<link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname, Astro.site)} />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLMP6J7LW7"></script>
 <script is:inline>
