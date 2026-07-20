@@ -4,6 +4,10 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.yilongscrubs.com',
-  integrations: [tailwind(), sitemap()],
+  integrations: [tailwind(), sitemap({
+    filter: (page) =>
+      !page.endsWith('/about/') &&
+      !page.endsWith('/fabric-tech/'),
+  })],
   output: 'static',
 });
