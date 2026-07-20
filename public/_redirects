@@ -1,0 +1,8 @@
+﻿# non-www → www (301 永久重定向，SEO 权重传递)
+https://yilongscrubs.com/*  https://www.yilongscrubs.com/:splat  301
+https://yilongscrub.com/*   https://www.yilongscrubs.com/:splat  301
+https://www.yilongscrub.com/*  https://www.yilongscrubs.com/:splat  301
+
+# 重复内容别名 → 规范 URL
+https://www.yilongscrubs.com/about/  https://www.yilongscrubs.com/about-us/  301
+https://www.yilongscrubs.com/fabric-tech/  https://www.yilongscrubs.com/fabric-technology/  301
